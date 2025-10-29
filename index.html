@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vishvek Methwani - Portfolio</title>
+    <meta name="description" content="Portfolio of Vishvek Methwani — Unity XR & VR Developer. Projects, experience, and contact information.">
+    <meta name="author" content="Vishvek Methwani">
+    <meta name="theme-color" content="#121212">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <!-- Mobile Menu Button -->
-    <button class="menu-toggle">☰ Menu</button>
+    <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">☰ Menu</button>
 
     <!-- Sidebar Navigation -->
-    <div class="sidebar">
+    <nav id="primary-navigation" class="sidebar" role="navigation" aria-label="Primary navigation">
         <div class="profile">
             <img src="assets/pfp.png" alt="Profile Picture">
             <h3>Vishvek Methwani</h3>
@@ -25,12 +30,13 @@
             <li class="nav-item"><a href="#education">Education</a></li>
             <li class="nav-item"><a href="#contact">Contact</a></li>
         </ul>
-    </div>
+    </nav>
 
     <!-- Main Content -->
-    <div class="content">
+    <main id="main" class="content" tabindex="-1">
         <!-- Home Section -->
         <section id="home" class="section home">
+            <h1 class="sr-only">Vishvek Methwani — Portfolio</h1>
             <h2>About Me</h2>
             <p>
                 <b>Unity XR Developer</b> with experience in building <b>VR</b>, <b>AR</b>, and <b>mobile games</b>, as well as interactive simulations for <b>commercial</b>, <b>educational</b>, and <b>fitness solutions</b>. Proficient in <b>C#</b>, <b>Unity Netcode</b>, <b>API integration</b>, and <b>performance optimization</b>. Skilled in version control <b>(Git)</b> and collaborative workflows, with a strong portfolio of professional and personal projects focused on delivering <b>immersive</b>, <b>optimized</b>, and <b>high-performance</b> experiences.
@@ -202,7 +208,8 @@
                             <a href="https://drive.google.com/file/d/1UpCQ2LYrKy7fMOovt8_l2OUcefJ85hR8/view?usp=sharing" target="_blank">Video Demonstration</a>
                         </p>
                         <p>
-                            Stack AR is a Unity-based ARCore mini-game for Android where players tap the screen to drop and stack 3D shapes on a detected plane. The goal is to build the highest stack without it falling, combining AR interaction with physics-based gameplay.                            
+                            Stack AR is a Unity-based ARCore mini-game for Android where players tap the screen to drop and stack 3D shapes on a detected plane. The goal is to build the highest stack without it falling, combining AR interaction with physics-based gameplay.
+                        </p>
                         <div class="project-tags">
                             <span class="tag">Unity</span>
                             <span class="tag">AR Core</span>
@@ -266,7 +273,7 @@
                 </div>
             </div>
         </section>
-    </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
