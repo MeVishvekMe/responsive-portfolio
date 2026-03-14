@@ -1,279 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishvek Methwani - Portfolio</title>
-    <meta name="description" content="Portfolio of Vishvek Methwani — Unity XR & VR Developer. Projects, experience, and contact information.">
-    <meta name="author" content="Vishvek Methwani">
-    <meta name="theme-color" content="#121212">
-    <link rel="icon" href="assets/favicon.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <!-- Mobile Menu Button -->
-    <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">☰ Menu</button>
 
-    <!-- Sidebar Navigation -->
-    <nav id="primary-navigation" class="sidebar" role="navigation" aria-label="Primary navigation">
-        <div class="profile">
-            <img src="assets/pfp.png" alt="Profile Picture">
-            <h3>Vishvek Methwani</h3>
-            <p>Unity Developer (VR & Interactive Applications)</p>
-        </div>
-        <ul class="nav-menu">
-            <li class="nav-item active"><a href="#home">Home</a></li>
-            <li class="nav-item"><a href="#experience">Experience</a></li>
-            <li class="nav-item"><a href="#projects">Projects</a></li>
-            <li class="nav-item"><a href="#education">Education</a></li>
-            <li class="nav-item"><a href="#contact">Contact</a></li>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vishvek Methwani — XR Developer</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-logo">VM.XR</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">XP</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#ongoing">Ongoing</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Main Content -->
-    <main id="main" class="content" tabindex="-1">
-        <!-- Home Section -->
-        <section id="home" class="section home">
-            <h1 class="sr-only">Vishvek Methwani — Portfolio</h1>
-            <h2>About Me</h2>
-            <p>
-                <b>Unity XR Developer</b> with experience in building <b>VR</b>, <b>AR</b>, and <b>mobile games</b>, as well as interactive simulations for <b>commercial</b>, <b>educational</b>, and <b>fitness solutions</b>. Proficient in <b>C#</b>, <b>Unity Netcode</b>, <b>API integration</b>, and <b>performance optimization</b>. Skilled in version control <b>(Git)</b> and collaborative workflows, with a strong portfolio of professional and personal projects focused on delivering <b>immersive</b>, <b>optimized</b>, and <b>high-performance</b> experiences.
-            </p>
-            
-            <!-- Social Links -->
-            <div class="social-links">
-                <a href="https://drive.google.com/file/d/1ETQyp-GXkU0Grr8Mr2XqDhI25-gPeTF0/view?usp=sharing" target="_blank" class="social-link resume">
-                    <i>📄</i>Resume
-                </a>
-                <a href="https://github.com/MeVishvekMe" target="_blank" class="social-link github">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/vishvek-methwani-9749b0188/" target="_blank" class="social-link linkedin">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://leetcode.com/u/methwanivishvek09/" target="_blank" class="social-link leetcode">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" class="leetcode-icon">LeetCode
-                </a>
-            </div>
-            
-            
-            <div style="margin-top: 30px;">
-                <h3>Skills</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
-                    <span class="tag">C# (Unity)</span>
-                    <span class="tag">Data Structures & Algorithms</span>
-                    <span class="tag">Java</span>
-                    <span class="tag">HTML, CSS, JS</span>
-                    <span class="tag">Unity (URP, Netcode)</span>
-                    <span class="tag">XR Interaction Toolkit</span>
-                    <span class="tag">Oculus & SteamVR SDKs</span>
-                    <span class="tag">ProBuilder</span>
-                    <span class="tag">Shader Graph</span>
-                    <span class="tag">Git/GitHub</span>
-                    <span class="tag">Unity Collaborate</span>
-                    <span class="tag">Figma</span>
-                </div>
-            </div>
-        </section>
+    <!-- HERO -->
+    <section id="about">
+        <div id="hero">
+            <div class="hero-bg-orb orb1"></div>
+            <div class="hero-bg-orb orb2"></div>
+            <div class="hero-content">
+                <div class="hero-tag">Unity XR Developer</div>
+                <h1 class="hero-name">Vishvek<br /><span>Methwani</span></h1>
+                <p class="hero-title">VR · AR · Game Dev</p>
+                <p class="hero-desc">
+                    Unity developer shipping VR, AR, and mobile games across commercial, educational,
+                    and fitness domains. From prototype to Play Store — I build experiences that are fast,
+                    immersive, and built to last.
+                </p>
 
-        <!-- Experience Section -->
-        <section id="experience" class="section experience">
-            <h2>Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Mobile Game Developer Intern</h3>
-                        <h4><b>Appzitter Technologies LLP</b>, Mohali, India (Remote)</h4>
-                        <p class="date">July 2025 - Present</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Freelance Unity VR Developer</h3>
-                        <h4><b>Volnyn</b>, New York, USA (Remote)</h4>
-                        <p class="date">Jul 2025 – Jul 2025</p>
-                        <ul style="margin-top: 10px; margin-left: 20px;">
-                            <li>Developed “<b>Maker Tool</b>”, a cross-platform environment creation tool with <b>Web</b> and <b>VR</b> support, integrating 3D model importing from <b>Sketchfab</b> with real-time object spawning and customization.</li>
-                            <li>Built lighting and environment editing features, delivering a functional prototype for internal demos before project discontinuation.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Mobile Game Developer Intern | <a href="https://drive.google.com/file/d/1GgyLMt7LDFsvzAjs5kbsRarP-HmtLbqo/view" target="_blank">Certification</a></h3>
-                        <h4><b>Appzitter Technologies LLP</b>, Mohali, India (Remote)</h4>
-                        <p class="date">May 2025 – Jul 2025</p>
-                        <ul style="margin-top: 10px; margin-left: 20px;">
-                            <li>Developed and optimized <b>2D card</b>, <b>puzzle</b>, and <b>physics-based games</b> for Android and iOS.</li>
-                            <li>Shipped 3 live games: <a href="https://play.google.com/store/apps/details?id=com.appzitter.war.card.game&hl=en_IN&pli=1" target="_blank">War Card Game</a>, <a href="https://play.google.com/store/apps/details?id=com.appzitter.fifteen.puzzle.sliding.game&hl=en_IN" target="_blank">Sliding Puzzle</a>, <a href="https://play.google.com/store/apps/details?id=com.appzitter.cribbage.card.game.board.offline.classic&hl=en_IN" target="_blank">Cribbage</a>.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>VR Developer Intern | <a href="https://drive.google.com/file/d/1TvkEInd4dIbt2EWdYxg4IRnWhJE8H4rT/view" target="_blank">Certification</a></h3>
-                        <h4><b>AIC MUJ Incubation Foundation</b>, Jaipur, India</h4>
-                        <p class="date">Oct 2024 – Jan 2025</p>
-                        <ul style="margin-top: 10px; margin-left: 20px;">
-                            <li>Developed VR game prototypes and a polished VR game showcased at the foundation’s event using <b>Unity</b> and other <b>Dev Tools</b>.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>VR Developer Intern | <a href="https://drive.google.com/file/d/1kawxoC63sZLeLU1q5v2sp5JCPwnf_hro/view" target="_blank">Certification</a></h3>
-                        <h4><b>Constituents AI And Technology Pvt. Ltd.</b>, India (Remote)</h4>
-                        <p class="date">Oct 2023 – Dec 2023</p>
-                        <ul style="margin-top: 10px; margin-left: 20px;">
-                            <li>Designed and implemented <b>3D physics-based educational VR simulations</b>, integrating interactive learning components and optimizing performance for low latency and cross-device compatibility.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section projects">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img"><img src="assets/project1.png" alt=""></div>
-                    <div class="project-info">
-                        <h3>Beat Boxing VR</h3>
-                        <p>
-                            <a href="https://github.com/MeVishvekMe/beat_boxing_vr" target="_blank">GitHub Repository</a>
-                            <br>
-                            <a href="https://drive.google.com/file/d/1qCP7rLIAZTvlig-b3d_53IM1O56YNEFn/view?usp=sharing" target="_blank">Video Demonstration</a>
-                        </p>
-                        <p>
-                            Developed an interactive VR fitness game with engaging gameplay, dynamic scoring, and user-generated beatmaps for customized workouts. Designed an intuitive VR UI/UX for seamless interaction.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Unity</span>
-                            <span class="tag">XR Interation Toolkit</span>
-                            <span class="tag">Newtonsoft JSON</span>
-                            <span class="tag">Figma</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img"><img src="assets/project2.png" alt=""></div>
-                    <div class="project-info">
-                        <h3>AnatoLab VR</h3>
-                        <p>
-                            <a href="https://github.com/MeVishvekMe/medical_project_vr" target="_blank">GitHub Repository</a>
-                            <br>
-                            <a href="https://drive.google.com/file/d/1P_Ha59H2VfQO0RZOJA1IBiX8uP5-ODVl/view" target="_blank">Video Demonstration</a>
-                        </p>
-                        <p>
-                            Created a VR heart dissection prototype for medical training and education.
-                            Integrated quizzes and interactive exploration, enhancing learning outcomes.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Unity</span>
-                            <span class="tag">XR Interation Toolkit</span>
-                            <span class="tag">Blender</span>
-                            <span class="tag">Figma</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img"><img src="assets/project3.png" alt=""></div>
-                    <div class="project-info">
-                        <h3>Space FighterZ</h3>
-                        <p>
-                            <a href="https://github.com/MeVishvekMe/vr_ninja_game" target="_blank">GitHub Repository</a>
-                            <br>
-                            <a href="https://www.linkedin.com/posts/vishvek-methwani-9749b0188_vrdevelopment-vr-gamedevelopment-activity-7249803318305165316-zsew?utm_source=share&utm_medium=member_desktop&rcm=ACoAACxJLGgBUEHx-pnxUUmz3fdPvFMMRlUtdZU" target="_blank">Video Demonstration</a>
-                        </p>
-                        <p>
-                            Developed a VR action game where players use a lightsaber to slice energy balls and a gun to attack an enemy spaceship, featuring physics-based combat and optimized for smooth, immersive gameplay.                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Unity</span>
-                            <span class="tag">XR Interation Toolkit</span>
-                            <span class="tag">EZ Slice Framework</span>
-                            <span class="tag">Figma</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img"><img src="assets/project4.png" alt=""></div>
-                    <div class="project-info">
-                        <h3>Stack AR</h3>
-                        <p>
-                            <a href="https://github.com/MeVishvekMe/stack_ar" target="_blank">GitHub Repository</a>
-                            <br>
-                            <a href="https://drive.google.com/file/d/1UpCQ2LYrKy7fMOovt8_l2OUcefJ85hR8/view?usp=sharing" target="_blank">Video Demonstration</a>
-                        </p>
-                        <p>
-                            Stack AR is a Unity-based ARCore mini-game for Android where players tap the screen to drop and stack 3D shapes on a detected plane. The goal is to build the highest stack without it falling, combining AR interaction with physics-based gameplay.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Unity</span>
-                            <span class="tag">AR Core</span>
-                            <span class="tag">Plane Detection</span>
-                            <span class="tag">Physics Based Gameplay</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="section education">
-            <h2>Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>B.Tech in Computer Science & Engineering (IoT and Intelligent Systems)</h3>
-                        <h4>Manipal University Jaipur</h4>
-                        <p class="date">2022 – 2026</p>
-                        <!-- <p>Relevant coursework: Course 1, Course 2, Course 3</p>
-                        <p>Achievements: Achievement 1, Achievement 2</p> -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section contact">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out to me for any inquiries or opportunities. I'll get back to you as soon as possible.</p>
-            
-            <!-- Contact Information -->
-            <div style="margin-bottom: 30px;">
-                <h3 style="margin-bottom: 15px; color: #ffffff;">Contact Information</h3>
-                <div style="display: flex; flex-direction: column; gap: 10px;">
-                    <div style="display: flex; align-items: center;">
-                        <i style="margin-right: 10px; color: #0077b5;">📱</i>
-                        <span>+91 94248 00704</span>
-                    </div>
-                    <div style="display: flex; align-items: center;">
-                        <i style="margin-right: 10px; color: #0077b5;">📧</i>
-                        <a href="mailto:methwani.vishvek09@gmail.com" style="color: #e0e0e0; text-decoration: none;">methwani.vishvek09@gmail.com</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Social Links -->
-            <div style="margin-bottom: 30px;">
-                <h3 style="margin-bottom: 15px; color: #ffffff;">Socials</h3>
-                <div class="social-links">
-                    <a href="https://github.com/MeVishvekMe" target="_blank" class="social-link github">
-                        <i class="fab fa-github"></i> GitHub
+                <div class="hero-socials">
+                    <a href="mailto:methwani.vishvek09@gmail.com" class="hero-social-link">
+                        <span class="hero-social-icon">✉</span> methwani.vishvek09@gmail.com
                     </a>
-                    <a href="https://www.linkedin.com/in/vishvek-methwani-9749b0188/" target="_blank" class="social-link linkedin">
-                        <i class="fab fa-linkedin"></i> LinkedIn
+                    <div class="hero-social-sep"></div>
+                    <a href="tel:+919424800704" class="hero-social-link">
+                        <span class="hero-social-icon">✆</span> +91-9424800704
                     </a>
-                    <a href="https://leetcode.com/u/methwanivishvek09/" target="_blank" class="social-link leetcode">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" class="leetcode-icon">LeetCode
+                    <div class="hero-social-sep"></div>
+                    <a href="https://www.linkedin.com/in/vishvek-methwani-9749b0188/" target="_blank"
+                        class="hero-social-link">
+                        <span class="hero-social-icon">in</span> LinkedIn
+                    </a>
+                    <div class="hero-social-sep"></div>
+                    <a href="https://github.com/MeVishvekMe" target="_blank" class="hero-social-link">
+                        <span class="hero-social-icon">⌥</span> GitHub
                     </a>
                 </div>
+
+                <div class="hero-cta">
+                    <a href="#projects" class="btn">View Projects</a>
+                    <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <div class="section-header reveal">
+            <span class="section-num">01</span>
+            <h2 class="section-title">Work Experience</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="exp-grid">
+
+            <div class="exp-item reveal">
+                <div class="exp-top">
+                    <div>
+                        <div class="exp-role">Mobile Game Developer</div>
+                        <div class="exp-company">Appzitter Technologies LLP</div>
+                    </div>
+                    <div class="exp-date">May 2025 — Jul 2025</div>
+                </div>
+                <div class="exp-location">Mohali, India · Remote</div>
+                <ul class="exp-bullets">
+                    <li>Built and shipped <strong>3 live Android/iOS games</strong>:
+                        <a href="https://play.google.com/store/apps/details?id=com.appzitter.war.card.game"
+                            style="color:var(--accent);text-decoration:none" target="_blank">War Card Game</a>,
+                        <a href="https://play.google.com/store/apps/details?id=com.appzitter.fifteen.puzzle.sliding.game"
+                            style="color:var(--accent);text-decoration:none" target="_blank">Sliding Puzzle</a>,
+                        <a href="https://play.google.com/store/apps/details?id=com.appzitter.cribbage.card.game.board.offline.classic"
+                            style="color:var(--accent);text-decoration:none" target="_blank">Cribbage</a>
+                        — all currently live on the Play Store.
+                    </li>
+                    <li>Worked on 2D card, puzzle, and physics-based mechanics; handled optimization for Android and iOS
+                        builds.</li>
+                </ul>
+                <a href="https://drive.google.com/file/d/1GgyLMt7LDFsvzAjs5kbsRarP-HmtLbqo/view" target="_blank"
+                    class="cert-link">▸ VIEW CERTIFICATE</a>
+            </div>
+
+            <div class="exp-item reveal">
+                <div class="exp-top">
+                    <div>
+                        <div class="exp-role">Freelance Unity VR Developer</div>
+                        <div class="exp-company">Volnyn</div>
+                    </div>
+                    <div class="exp-date">Jul 2025</div>
+                </div>
+                <div class="exp-location">New York, USA · Remote</div>
+                <ul class="exp-bullets">
+                    <li>Built <strong>"Maker Tool"</strong> — a cross-platform environment creation tool supporting Web
+                        and VR, with real-time 3D object spawning, customization, and Sketchfab model importing.</li>
+                    <li>Implemented lighting controls and environment editing; delivered a demo-ready prototype within a
+                        tight timeline.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item reveal">
+                <div class="exp-top">
+                    <div>
+                        <div class="exp-role">VR Developer Intern</div>
+                        <div class="exp-company">AIC MUJ Incubation Foundation</div>
+                    </div>
+                    <div class="exp-date">Oct 2024 — Jan 2025</div>
+                </div>
+                <div class="exp-location">Jaipur, India</div>
+                <ul class="exp-bullets">
+                    <li>Built multiple VR game prototypes using Unity, XR Interaction Toolkit, and Oculus SDK; one
+                        polished title showcased at the foundation's demo event.</li>
+                </ul>
+                <a href="https://drive.google.com/file/d/1TvkEInd4dIbt2EWdYxg4IRnWhJE8H4rT/view" target="_blank"
+                    class="cert-link">▸ VIEW CERTIFICATE</a>
+            </div>
+
+            <div class="exp-item reveal">
+                <div class="exp-top">
+                    <div>
+                        <div class="exp-role">VR Developer Intern</div>
+                        <div class="exp-company">Constituents AI And Technology</div>
+                    </div>
+                    <div class="exp-date">Oct 2023 — Dec 2023</div>
+                </div>
+                <div class="exp-location">India · Remote</div>
+                <ul class="exp-bullets">
+                    <li>Built 3D physics-based educational VR simulations with interactive learning components;
+                        optimized for low latency across multiple headset targets.</li>
+                </ul>
+                <a href="https://drive.google.com/file/d/1kawxoC63sZLeLU1q5v2sp5JCPwnf_hro/view" target="_blank"
+                    class="cert-link">▸ VIEW CERTIFICATE</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="section-header reveal">
+            <span class="section-num">02</span>
+            <h2 class="section-title">Projects</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <!-- Personal -->
+        <div class="proj-subheading reveal">
+            <span class="proj-subheading-label">Personal</span>
+            <div class="proj-subheading-line"></div>
+            <span class="proj-subheading-tag">3 Projects</span>
+        </div>
+        <div class="proj-grid">
+
+            <div class="proj-card reveal">
+                <div class="proj-preview">
+                    <img src="beat_boxing.gif" alt="Beat Boxing VR"
+                        onerror="this.parentElement.innerHTML='<div class=\'proj-preview-placeholder\'><div class=\'proj-preview-icon\'>VR</div></div>'" />
+                    <div class="proj-badge badge-personal">Personal</div>
+                </div>
+                <div class="proj-corner"></div>
+                <div class="proj-body">
+                    <div class="proj-stack">Unity · C# · XRI · JSON</div>
+                    <div class="proj-title">Beat Boxing VR Demo</div>
+                    <div class="proj-desc">VR fitness game with dynamic scoring and user-generated beatmaps via JSON
+                        parsing. Designed the full in-headset UI/UX flow from scratch.</div>
+                    <div class="proj-links">
+                        <a href="https://drive.google.com/file/d/1qCP7rLIAZTvlig-b3d_53IM1O56YNEFn/view" target="_blank"
+                            class="proj-link">▶ Demo Video</a>
+                        <a href="https://github.com/MeVishvekMe/beat_boxing_vr" target="_blank" class="proj-link">⌥
+                            GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card reveal">
+                <div class="proj-preview">
+                    <img src="anatolab.gif" alt="AnatoLab VR"
+                        onerror="this.parentElement.innerHTML='<div class=\'proj-preview-placeholder\'><div class=\'proj-preview-icon\'>VR</div></div>'" />
+                    <div class="proj-badge badge-personal">Personal</div>
+                </div>
+                <div class="proj-corner"></div>
+                <div class="proj-body">
+                    <div class="proj-stack">Unity · C# · Medical Sim · VR</div>
+                    <div class="proj-title">AnatoLab VR</div>
+                    <div class="proj-desc">VR anatomy prototype featuring interactive heart dissection and embedded
+                        knowledge quizzes. Built for educational VR use cases.</div>
+                    <div class="proj-links">
+                        <a href="https://drive.google.com/file/d/1P_Ha59H2VfQO0RZOJA1IBiX8uP5-ODVl/view" target="_blank"
+                            class="proj-link">▶ Demo Video</a>
+                        <a href="https://github.com/MeVishvekMe/medical_project_vr" target="_blank" class="proj-link">⌥
+                            GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card reveal">
+                <div class="proj-preview">
+                    <img src="spacefighterz.gif" alt="Space FighterZ VR"
+                        onerror="this.parentElement.innerHTML='<div class=\'proj-preview-placeholder\'><div class=\'proj-preview-icon\'>VR</div></div>'" />
+                    <div class="proj-badge badge-personal">Personal</div>
+                </div>
+                <div class="proj-corner"></div>
+                <div class="proj-body">
+                    <div class="proj-stack">Unity · C# · XRI · VR Combat</div>
+                    <div class="proj-title">Space FighterZ VR</div>
+                    <div class="proj-desc">Physics-based VR action game with dual-wielding lightsabers and ranged combat
+                        against enemy spaceships. Full VR interaction loop.</div>
+                    <div class="proj-links">
+                        <a href="https://www.linkedin.com/posts/vishvek-methwani-9749b0188_vrdevelopment-vr-gamedevelopment-activity-7249803318305165316-zsew/"
+                            target="_blank" class="proj-link">▶ Gameplay Video</a>
+                        <a href="https://github.com/MeVishvekMe/vr_ninja_game" target="_blank" class="proj-link">⌥
+                            GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Company / Freelance -->
+        <div class="proj-subheading reveal">
+            <span class="proj-subheading-label">Company · Freelance</span>
+            <div class="proj-subheading-line"></div>
+            <span class="proj-subheading-tag">4 Projects</span>
+        </div>
+        <div class="proj-grid">
+
+            <div class="proj-card reveal">
+                <div class="proj-preview">
+                    <img src="war_card.gif" alt="War Card Game"
+                        onerror="this.parentElement.innerHTML='<div class=\'proj-preview-placeholder\'><div class=\'proj-preview-icon\'>2D</div></div>'" />
+                    <div class="proj-badge badge-company">Appzitter</div>
+                    <div class="proj-badge badge-live">● LIVE</div>
+                </div>
+                <div class="proj-corner"></div>
+                <div class="proj-body">
+                    <div class="proj-stack">Unity · C# · Android · iOS</div>
+                    <div class="proj-title">War Card Game</div>
+                    <div class="proj-desc">Classic War card game for Android and iOS. Full game logic, deck shuffling,
+                        win/loss states, and polished 2D UI.</div>
+                    <div class="proj-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.appzitter.war.card.game"
+                            target="_blank" class="proj-link">▶ Play Store</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card reveal">
+                <div class="proj-preview">
+                    <img src="sliding_puzzle.gif" alt="Sliding Puzzle"
+                        onerror="this.parentElement.innerHTML='<div class=\'proj-preview-placeholder\'><div class=\'proj-preview-icon\'>2D</div></div>'" />
+                    <div class="proj-badge badge-company">Appzitter</div>
+                    <div class="proj-badge badge-live">● LIVE</div>
+                </div>
+                <div class="proj-corner"></div>
+                <div class="proj-body">
+                    <div class="proj-stack">Unity · C# · Android · iOS · Physics</div>
+                    <div class="proj-title">Sliding Puzzle</div>
+                    <div class="proj-desc">15-tile sliding puzzle with smooth animations, difficulty levels, and move
+                        counter. Optimized for touch input on both platforms.</div>
+                    <div class="proj-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.appzitter.fifteen.puzzle.sliding.game"
+                            target="_blank" class="proj-link">▶ Play Store</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card reveal">
+                <div class="proj-preview">
+                    <img src="cribbage.gif" alt="Cribbage"
+                        onerror="this.parentElement.innerHTML='<div class=\'proj-preview-placeholder\'><div class=\'proj-preview-icon\'>2D</div></div>'" />
+                    <div class="proj-badge badge-company">Appzitter</div>
+                    <div class="proj-badge badge-live">● LIVE</div>
+                </div>
+                <div class="proj-corner"></div>
+                <div class="proj-body">
+                    <div class="proj-stack">Unity · C# · Android · iOS · Card Game</div>
+                    <div class="proj-title">Cribbage</div>
+                    <div class="proj-desc">Full Cribbage card game with AI opponent, peg scoring, and classic board UI.
+                        Handles all rule edge cases and pegging logic.</div>
+                    <div class="proj-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.appzitter.cribbage.card.game.board.offline.classic"
+                            target="_blank" class="proj-link">▶ Play Store</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card reveal">
+                <div class="proj-preview">
+                    <img src="maker_tool.gif" alt="Maker Tool"
+                        onerror="this.parentElement.innerHTML='<div class=\'proj-preview-placeholder\'><div class=\'proj-preview-icon\'>VR</div></div>'" />
+                    <div class="proj-badge badge-company">Volnyn</div>
+                </div>
+                <div class="proj-corner"></div>
+                <div class="proj-body">
+                    <div class="proj-stack">Unity · C# · WebGL · VR · Sketchfab API</div>
+                    <div class="proj-title">Maker Tool</div>
+                    <div class="proj-desc">Cross-platform environment creation tool with Web and VR support. Real-time
+                        3D object spawning, customization, lighting editing, and Sketchfab model importing.</div>
+                    <div class="proj-links">
+                        <span class="proj-link" style="cursor:default;opacity:0.5;">⊘ Private / NDA</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ONGOING -->
+    <section id="ongoing">
+        <div class="section-header reveal">
+            <span class="section-num">03</span>
+            <h2 class="section-title">Ongoing</h2>
+            <div class="section-line"></div>
+        </div>
+        <p class="reveal"
+            style="color:var(--text-dim);font-size:14px;font-family:'Share Tech Mono',monospace;letter-spacing:1px;margin-bottom:36px;">
+            // Currently in development — check back for updates
+        </p>
+        <div class="ongoing-grid">
+
+            <div class="ongoing-card reveal">
+                <div class="ongoing-top">
+                    <div class="ongoing-title">Multiplayer VR Arena</div>
+                    <div class="ongoing-status">IN DEV</div>
+                </div>
+                <div class="ongoing-stack">Unity · Photon Fusion · VR · XRI</div>
+                <div class="ongoing-desc">Real-time multiplayer VR combat game using Photon Fusion for low-latency
+                    networking. Players join rooms, pick loadouts, and fight in physics-driven arenas.</div>
+                <div class="ongoing-progress">
+                    <div class="progress-label"><span>Progress</span><span>40%</span></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="40"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ongoing-card reveal">
+                <div class="ongoing-top">
+                    <div class="ongoing-title">VR Educational Platform</div>
+                    <div class="ongoing-status">EARLY DEV</div>
+                </div>
+                <div class="ongoing-stack">Unity · C# · VR · REST API</div>
+                <div class="ongoing-desc">Modular VR learning environment with swappable subject modules. Extends work
+                    from AnatoLab into a broader platform for interactive 3D education.</div>
+                <div class="ongoing-progress">
+                    <div class="progress-label"><span>Progress</span><span>20%</span></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="20"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="section-header reveal">
+            <span class="section-num">04</span>
+            <h2 class="section-title">Skills</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-block reveal">
+                <div class="skill-cat">Programming</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">C# (Unity)</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                </div>
+            </div>
+            <div class="skill-block reveal">
+                <div class="skill-cat">XR Development</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">XR Interaction Toolkit</span>
+                    <span class="skill-tag">Oculus SDK</span>
+                    <span class="skill-tag">SteamVR SDK</span>
+                    <span class="skill-tag">Unity URP</span>
+                </div>
+            </div>
+            <div class="skill-block reveal">
+                <div class="skill-cat">Multiplayer & Networking</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Unity Netcode</span>
+                    <span class="skill-tag">Photon Fusion</span>
+                </div>
+            </div>
+            <div class="skill-block reveal">
+                <div class="skill-cat">3D & Game Tools</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">ProBuilder</span>
+                    <span class="skill-tag">Shader Graph</span>
+                    <span class="skill-tag">Timeline</span>
+                    <span class="skill-tag">Animation Rigging</span>
+                </div>
+            </div>
+            <div class="skill-block reveal">
+                <div class="skill-cat">Version Control & Workflow</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Git / GitHub</span>
+                    <span class="skill-tag">JIRA</span>
+                    <span class="skill-tag">Agile</span>
+                </div>
+            </div>
+            <div class="skill-block reveal">
+                <div class="skill-cat">UI / UX</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">VR UI Design</span>
+                    <span class="skill-tag">In-Headset UX</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="contact-inner">
+            <div class="contact-left reveal">
+                <h2>Let's Build<br />Something.</h2>
+                <p>Open to full-time roles and freelance XR projects. If you're building something in VR, AR, or game
+                    dev — reach out.</p>
+            </div>
+            <div class="contact-form reveal">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="cf-name">Name</label>
+                        <input type="text" id="cf-name" placeholder="Your name" autocomplete="off" />
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" placeholder="your@email.com" autocomplete="off" />
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="cf-subject">Subject</label>
+                    <input type="text" id="cf-subject" placeholder="What's this about?" autocomplete="off" />
+                </div>
+                <div class="form-field">
+                    <label for="cf-message">Message</label>
+                    <textarea id="cf-message" rows="5" placeholder="Tell me about your project..."></textarea>
+                </div>
+                <div id="form-status"></div>
+                <button class="btn" onclick="sendMail()">Send Message</button>
+            </div>
+        </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
+
 </html>
