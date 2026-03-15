@@ -63,6 +63,15 @@ const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 
 window.addEventListener('scroll', () => {
+    // If user is at (or near) the very bottom of the page, force "contact" active
+    const atBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - 150;
+    if (atBottom) {
+        navLinks.forEach(a => {
+            a.classList.toggle('active', a.getAttribute('href') === '#contact');
+        });
+        return;
+    }
+
     let current = '';
     sections.forEach(s => {
         if (window.scrollY >= s.offsetTop - 120) current = s.id;
@@ -72,8 +81,8 @@ window.addEventListener('scroll', () => {
     });
 });
 
-/* ── Contact form → mailto ── */
-function sendMail() {
+/* ── Contact form → EmailJS ── */
+async function sendMail() {
     const name = document.getElementById('cf-name').value.trim();
     const email = document.getElementById('cf-email').value.trim();
     const subject = document.getElementById('cf-subject').value.trim();
@@ -86,15 +95,35 @@ function sendMail() {
         return;
     }
 
-    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-    window.location.href =
-        `mailto:methwani.vishvek09@gmail.com` +
-        `?subject=${encodeURIComponent(subject || 'Portfolio Enquiry')}` +
-        `&body=${encodeURIComponent(body)}`;
+    status.style.color = 'var(--text-dim)';
+    status.textContent = '▸ Sending...';
 
-    status.style.color = 'var(--accent)';
-    status.textContent = '▸ Opening your mail client...';
-    setTimeout(() => { status.textContent = ''; }, 4000);
+    try {
+        await emailjs.send(
+            'service_o68rmtm',   // ← replace with your Service ID
+            'template_itjyqck',  // ← replace with your Template ID
+            {
+                from_name: name,
+                from_email: email,
+                subject: subject || 'Portfolio Enquiry',
+                message: message,
+                to_email: 'methwani.vishvek09@gmail.com'
+            }
+        );
+
+        status.style.color = 'var(--accent)';
+        status.textContent = '▸ Message sent successfully!';
+        document.getElementById('cf-name').value = '';
+        document.getElementById('cf-email').value = '';
+        document.getElementById('cf-subject').value = '';
+        document.getElementById('cf-message').value = '';
+    } catch (err) {
+        status.style.color = 'var(--accent3)';
+        status.textContent = '▸ Failed to send. Please try again.';
+        console.error('EmailJS error:', err);
+    }
+
+    setTimeout(() => { status.textContent = ''; }, 5000);
 }
 
 // Allow Enter key in single-line fields to submit
